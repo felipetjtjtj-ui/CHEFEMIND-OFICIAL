@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: #FFFFFF;
+  background-color: #050505;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --brand-red: #8E0B0B;
+  --brand-red-hover: #A50D0D;
+}
+
+body {
+  margin: 0;
+  display: block;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #050505;
+  overflow-x: hidden;
+  cursor: none; /* For custom cursor implementation */
+}
+
+/* Base Styles */
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Glassmorphism Elements */
+.glass-card {
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+}
+
+/* Background Grids */
+.bg-grid {
+  background-size: 60px 60px;
+  background-image: linear-gradient(to right, rgba(20, 20, 20, 0.5) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20, 20, 20, 0.5) 1px, transparent 1px);
+}
+
+/* Custom UI Components */
+.whatsapp-btn {
+  background: #25D366;
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 20px rgba(37, 211, 102, 0.15);
+}
+
+.whatsapp-btn:hover {
+  background: #1da851;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(37, 211, 102, 0.25);
+}
+
+/* Specialized Range Slider for Calculator */
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: #151515;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+input[type=range]::-webkit-slider-thumb {
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background: var(--brand-red);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -11px;
+  box-shadow: 0 0 20px rgba(142, 11, 11, 0.4);
+  transition: transform 0.2s;
+}
+input[type=range]:active::-webkit-slider-thumb {
+  transform: scale(1.1);
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Utility Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
