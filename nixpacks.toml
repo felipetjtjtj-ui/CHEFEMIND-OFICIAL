@@ -1,8 +1,0 @@
-[phases.setup]
-nixPkgs = ["nodejs_20"]
-
-[phases.build]
-cmds = ["echo 'Pre-built site - skipping build'"]
-
-[start]
-cmd = "npx serve dist -s -l $PORT"
